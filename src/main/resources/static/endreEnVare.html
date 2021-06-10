@@ -9,13 +9,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+<div class="container">
 <h2>Endre vare</h2>
-<form id="form" onsubmit="endreEnVare(); return false;" action="#">
+<form id="form" onsubmit="endreEnVare()" action="#">
     <input id="id" hidden>
     <div class="form-group row">
         <div class="col-xs-6">
             <label for="vare">Vare: </label>
-            <input class="form-control input-group-lg" id="vare" value="Agurk" onchange="validerVare(this.value)">
+            <input class="form-control input-group-lg" id="vare" onchange="validerVare(this.value)">
             <span id="vareError" class="text-danger"></span>
         </div>
         <div class="col-xs-3">
@@ -26,6 +27,7 @@
     </div>
     <button class="btn btn-primary" type="submit">Endre varen</button>
 </form>
+</div>
 <div id="feil">
 </div>
 <script src="endreEnVare.js"></script>

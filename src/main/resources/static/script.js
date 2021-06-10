@@ -12,7 +12,7 @@ function lagre() {
         vare: vareInn,
         antall: antallInn
     };
-
+if(validerVare() && validerAntall()) {
     $.post("/lagre", vare, function () {
         hentAlle();
     }).fail(function (jqXHR){
@@ -20,7 +20,7 @@ function lagre() {
         $("#feil").html(json.message);
     })
 }
-
+}
 function hentAlle() {
     $.get("/hentAlle", function (data) {
         formaterTekst(data);
@@ -50,6 +50,7 @@ function formaterTekst(varer) {
     }
     utprint += "</table>"
     ut.innerHTML = utprint;
+    document.getElementById("form").reset()
 }
 
 function slettEnVare(id) {
