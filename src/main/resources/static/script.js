@@ -44,7 +44,6 @@ function formaterTekst(varer) {
             "<tr>" +
             "<td>" + vare.vare + "</td>" +
             "<td>" + vare.antall + "</td>" +
-            "<td>" + vare.id + "</td>" +
             "<td> <a class='btn btn-primary' href='endreEnVare.html?id="+vare.id+"'>Endre vare</a></td>"+
             "<td><button class='btn btn-danger' onclick='slettEnVare("+vare.id+")'>Slett vare</button></td>" +
             "</tr>"
