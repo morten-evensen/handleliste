@@ -26,7 +26,7 @@ public class VareController {
     public void lagre(Vare innVare, HttpServletResponse response) throws IOException {
         String sql = "INSERT INTO Varer (vare,antall) VALUES(?,?)";
         try {
-                db.update(sql, innVare.getVare(), innVare.getAntall());
+            db.update(sql, innVare.getVare(), innVare.getAntall());
         } catch (Exception e) {
             logger.error(e.getMessage());
             response.sendError(HttpStatus.INTERNAL_SERVER_ERROR.value(), "Feil i lagring i database - prøv igjen senere");
